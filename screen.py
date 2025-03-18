@@ -8,6 +8,8 @@ class Screen:
         self.screen.bgcolor('black')
         self.screen.setup(width=800, height=600)
 
+        self._is_game_on = True
+
     def run_screen(self):
         self.screen.mainloop()
 
