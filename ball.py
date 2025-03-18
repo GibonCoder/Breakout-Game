@@ -1,2 +1,6 @@
+import turtle as t
+
+
 class Ball:
-    pass
+    def __init__(self, x, y, radius, color, velocity):
+        pass
