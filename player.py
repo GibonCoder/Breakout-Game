@@ -1,2 +1,6 @@
+import turtle as t
+
+
 class Player:
-    pass
+    def __init__(self):
+        pass
