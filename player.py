@@ -9,6 +9,7 @@ class Player:
         self.player.shapesize(stretch_wid=1, stretch_len=5)
         self.player.penup()
         self.player.goto(0, -280)
+        self.player.speed(1)
 
     def move_left(self):
         x = self.player.xcor()
