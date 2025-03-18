@@ -16,3 +16,7 @@ class Screen:
     def place_ball(self, ball):
         ball.showturtle()
         self.screen.listen()
+
+    def place_player(self, player):
+        player.showturtle()
+        self.screen.listen()
