@@ -6,5 +6,7 @@ class Player:
         self.player = t.Turtle()
         self.player.shape('square')
         self.player.color('green')
-        self.player.shapesize(stretch_wid=5, stretch_len=1)
+        self.player.shapesize(stretch_wid=1, stretch_len=5)
         self.player.penup()
+        self.player.goto(0, -280)
+
