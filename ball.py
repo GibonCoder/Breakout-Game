@@ -2,10 +2,10 @@ import turtle as t
 
 
 class Ball:
-    def __init__(self, color):
+    def __init__(self):
         self.ball = t.Turtle()
         self.ball.shape('circle')
-        self.ball.color(color)
+        self.ball.color('white')
         self.ball.penup()
         self.ball.goto(0, 0)
 
