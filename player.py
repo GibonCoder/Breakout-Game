@@ -17,3 +17,10 @@ class Player:
             x = -347
         self.player.setx(x)
 
+    def move_right(self):
+        x = self.player.xcor()
+        x += 20
+        if x > 340:
+            x = 340
+        self.player.setx(x)
+
