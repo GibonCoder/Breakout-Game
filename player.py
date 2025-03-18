@@ -10,3 +10,10 @@ class Player:
         self.player.penup()
         self.player.goto(0, -280)
 
+    def move_left(self):
+        x = self.player.xcor()
+        x -= 20
+        if x < -347:
+            x = -347
+        self.player.setx(x)
+
