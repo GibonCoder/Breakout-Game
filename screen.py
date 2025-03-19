@@ -2,11 +2,12 @@ import turtle as t
 
 
 class Screen:
-    def __init__(self):
+    def __init__(self, player):
         self.screen = t.Screen()
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
         self.screen.setup(width=800, height=600)
+        self.play(player)
 
         self._is_game_on = True
 
