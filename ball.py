@@ -27,4 +27,7 @@ class Ball:
 
     def hit_paddle(self, paddle):
         if self.ball.distance(paddle) < 25:
-            self.ball.right(75)
+            if paddle.xcor() < 0:
+                self.ball.setheading(random.randint(0, 90))
+            elif paddle.xcor() > 0:
+                self.ball.setheading(random.randint(90, 180))
