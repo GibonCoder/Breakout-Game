@@ -11,8 +11,18 @@ class Ball:
         self.ball.right(135)
 
     def move(self):
-        self.ball.setx(self.ball.xcor() - 2)
-        self.ball.sety(self.ball.ycor() - 2)
+        if self.ball.heading() in range(0, 90):
+            self.ball.setx(self.ball.xcor() + 2)
+            self.ball.sety(self.ball.ycor() + 2)
+        elif self.ball.heading() in range(90, 180):
+            self.ball.setx(self.ball.xcor() - 2)
+            self.ball.sety(self.ball.ycor() + 2)
+        elif self.ball.heading() in range(180, 270):
+            self.ball.setx(self.ball.xcor() - 2)
+            self.ball.sety(self.ball.ycor() - 2)
+        elif self.ball.heading() in range(270, 360):
+            self.ball.setx(self.ball.xcor() + 2)
+            self.ball.sety(self.ball.ycor() - 2)
 
     def hit_paddle(self, paddle):
         if self.ball.distance(paddle) < 50:
