@@ -2,7 +2,7 @@ import turtle as t
 
 
 class Screen:
-    def __init__(self, player):
+    def __init__(self, player, ball):
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
@@ -10,7 +10,7 @@ class Screen:
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
         self.screen.setup(width=800, height=600)
-        self.play(player)
+        self.play(player, ball)
 
     def run_screen(self):
         self.screen.mainloop()
@@ -23,8 +23,10 @@ class Screen:
         player.showturtle()
         self.screen.listen()
 
-    def play(self, player):
+    def play(self, player, ball):
         self.screen.listen()
         self.screen.onkeypress(player.move_left, 'Left')
         self.screen.onkeypress(player.move_right, 'Right')
-
+        while self._is_game_on:
+            ball.move()
+            ball.hit_paddle(player.paddle)
