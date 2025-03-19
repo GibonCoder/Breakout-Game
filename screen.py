@@ -3,13 +3,14 @@ import turtle as t
 
 class Screen:
     def __init__(self, player):
+        # Variables
         self.screen = t.Screen()
+        self._is_game_on = True
+        # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
         self.screen.setup(width=800, height=600)
         self.play(player)
-
-        self._is_game_on = True
 
     def run_screen(self):
         self.screen.mainloop()
@@ -26,3 +27,4 @@ class Screen:
         self.screen.listen()
         self.screen.onkeypress(player.move_left, 'Left')
         self.screen.onkeypress(player.move_right, 'Right')
+
