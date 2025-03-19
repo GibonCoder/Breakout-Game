@@ -12,3 +12,6 @@ class Ball:
     def move(self):
         self.ball.setx(self.ball.xcor() + 2)
         self.ball.sety(self.ball.ycor() + 2)
+
+    def hit_paddle(self):
+        pass
