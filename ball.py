@@ -9,7 +9,7 @@ class Ball:
         self.ball.color('white')
         self.ball.penup()
         self.ball.goto(0, 0)
-        self.ball.right(135)
+        self.ball.setheading(225)
 
     def move(self):
         if self.ball.heading() in range(0, 90):
