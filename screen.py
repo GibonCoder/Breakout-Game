@@ -20,3 +20,8 @@ class Screen:
     def place_player(self, player):
         player.showturtle()
         self.screen.listen()
+
+    def play(self, player):
+        self.screen.listen()
+        self.screen.onkeypress(player.move_left, 'Left')
+        self.screen.onkeypress(player.move_right, 'Right')
