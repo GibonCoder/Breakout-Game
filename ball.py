@@ -8,6 +8,7 @@ class Ball:
         self.ball.color('white')
         self.ball.penup()
         self.ball.goto(0, 0)
+        self.ball.right(135)
 
     def move(self):
         self.ball.setx(self.ball.xcor() - 2)
