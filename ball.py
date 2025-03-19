@@ -26,5 +26,5 @@ class Ball:
             self.ball.sety(self.ball.ycor() - 2)
 
     def hit_paddle(self, paddle):
-        if self.ball.distance(paddle) < 50:
+        if self.ball.distance(paddle) < 25:
             self.ball.right(75)
