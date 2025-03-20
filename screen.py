@@ -29,4 +29,6 @@ class Screen:
         self.screen.onkeypress(player.move_right, 'Right')
         while self._is_game_on:
             ball.move()
-            ball.hit_paddle(player.paddle)
+            paddle_x = player.get_x()
+            paddle_y = player.get_y()
+            ball.hit_paddle(paddle_x, paddle_y)
