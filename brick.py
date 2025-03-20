@@ -7,6 +7,7 @@ class Brick:
         self.brick = t. Turtle()
         self.brick.shape('square')
         self.brick.color(random_color())
+        self.brick.penup()
 
     def set_size(self, size):
         match size:
