@@ -6,6 +6,7 @@ class Brick:
     def __init__(self):
         self.brick = t. Turtle()
         self.brick.shape('square')
+        t.Screen().colormode(255)
         self.brick.color(random_color())
         self.brick.penup()
 
@@ -20,3 +21,6 @@ class Brick:
 
     def set_position(self, x, y):
         self.brick.goto(x, y)
+
+
+
