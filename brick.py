@@ -20,7 +20,8 @@ class Brick:
                 self.brick.shapesize(stretch_len=3, stretch_wid=1)
 
     def set_position(self, x, y):
-        self.brick.goto(x, y)
+        self.brick.setx(x)
+        self.brick.sety(y)
 
 
 
