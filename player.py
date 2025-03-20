@@ -25,3 +25,9 @@ class Player:
             x = 340
         self.paddle.setx(x)
 
+    def get_x(self):
+        return self.paddle.xcor()
+
+    def get_y(self):
+        return self.paddle.ycor()
+
