@@ -17,3 +17,6 @@ class Brick:
                 self.brick.shapesize(stretch_len=2, stretch_wid=1)
             case 'large':
                 self.brick.shapesize(stretch_len=3, stretch_wid=1)
+
+    def set_position(self, x, y):
+        self.brick.goto(x, y)
