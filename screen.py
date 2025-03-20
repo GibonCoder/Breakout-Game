@@ -1,4 +1,5 @@
 import turtle as t
+from brick import Brick
 
 
 class Screen:
@@ -6,6 +7,7 @@ class Screen:
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
+        self.bricks = [[Brick() for _ in range(10)] for _ in range(5)]
         # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
