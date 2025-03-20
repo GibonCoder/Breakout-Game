@@ -23,12 +23,16 @@ class Screen:
         player.showturtle()
         self.screen.listen()
 
+    def place_bricks(self):
+        pass
+
     def play(self, player, ball):
         self.screen.listen()
         self.screen.onkeypress(player.move_left, 'Left')
         self.screen.onkeypress(player.move_right, 'Right')
         while self._is_game_on:
             ball.move()
+            # Collision check with paddle
             paddle_x = player.get_x()
             paddle_y = player.get_y()
             ball.hit_paddle(paddle_x, paddle_y)
