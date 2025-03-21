@@ -22,7 +22,7 @@ class Screen:
         ball.showturtle()
 
     @staticmethod
-    def place_player(self, player):
+    def place_player(player):
         player.showturtle()
 
     def place_bricks(self):
@@ -31,12 +31,13 @@ class Screen:
                 x = -380 + (col * 80)
                 y = 250 - (row * 20)
                 self.bricks[row][col].set_position(x, y)
-                self.bricks[row][col].set_size('large')
+                self.bricks[row][col].set_size('small')
 
     def play(self, player, ball):
         self.screen.listen()
         self.screen.onkeypress(player.move_left, 'Left')
         self.screen.onkeypress(player.move_right, 'Right')
+        self.place_bricks()
         while self._is_game_on:
             ball.move()
             # Collision check with paddle
