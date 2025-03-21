@@ -17,13 +17,13 @@ class Screen:
     def run_screen(self):
         self.screen.mainloop()
 
+    @staticmethod
     def place_ball(self, ball):
         ball.showturtle()
-        self.screen.listen()
 
+    @staticmethod
     def place_player(self, player):
         player.showturtle()
-        self.screen.listen()
 
     def place_bricks(self):
         for row in range(len(self.bricks)):
