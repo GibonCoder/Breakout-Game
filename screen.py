@@ -26,7 +26,12 @@ class Screen:
         player.showturtle()
         self.screen.listen()
 
-
+    def bricks_setup(self):
+        for row in range(len(self.bricks)):
+            for col in range(len(self.bricks[row])):
+                x = -380 + (col * 80)
+                y = 250 - (row * 20)
+                self.bricks[row][col] = Brick(x, y)
 
     def place_bricks(self):
         for row in range(len(self.bricks)):
