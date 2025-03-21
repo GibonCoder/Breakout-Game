@@ -33,14 +33,6 @@ class Screen:
                 y = 250 - (row * 20)
                 self.bricks[row][col] = Brick(x, y)
 
-    def place_bricks(self):
-        for row in range(len(self.bricks)):
-            for col in range(len(self.bricks[row])):
-                x = -380 + (col * 80)
-                y = 250 - (row * 20)
-                self.bricks[row][col].set_position(x, y)
-                self.bricks[row][col].set_size('large')
-
     def play(self, player, ball):
         self.screen.listen()
         self.screen.onkeypress(player.move_left, 'Left')
