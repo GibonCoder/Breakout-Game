@@ -3,12 +3,14 @@ from random_color_generator import random_color_generator as random_color
 
 
 class Brick:
-    def __init__(self):
+    def __init__(self, x, y):
         self.brick = t. Turtle()
         self.brick.shape('square')
         t.Screen().colormode(255)
         self.brick.color(random_color())
         self.brick.penup()
+
+        self.set_position(x, y)
 
     def set_size(self, size):
         match size:
@@ -22,6 +24,8 @@ class Brick:
     def set_position(self, x, y):
         self.brick.setx(x)
         self.brick.sety(y)
+
+        print(x, y)
 
 
 
