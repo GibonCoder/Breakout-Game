@@ -7,7 +7,8 @@ class Screen:
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
-        self.bricks = [[Brick() for _ in range(10)] for _ in range(5)]
+        self.bricks = [[None for _ in range(10)] for _ in range(5)]
+
         # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
@@ -24,6 +25,8 @@ class Screen:
     def place_player(self, player):
         player.showturtle()
         self.screen.listen()
+
+
 
     def place_bricks(self):
         for row in range(len(self.bricks)):
