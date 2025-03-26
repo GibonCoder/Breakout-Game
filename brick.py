@@ -9,6 +9,7 @@ class Brick:
         t.Screen().colormode(255)
         self.brick.color(random_color())
         self.brick.penup()
+        self.brick.speed(0)
         self.brick.shapesize(stretch_len=1, stretch_wid=1)
 
     def set_position(self, x, y):
