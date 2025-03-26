@@ -28,7 +28,7 @@ class Screen:
     def place_bricks(self):
         for row in range(len(self.bricks)):
             for col in range(len(self.bricks[row])):
-                x = -380 + (col * 80)
+                x = -380 + (col * 20)
                 y = 250 - (row * 20)
                 self.bricks[row][col].set_position(x, y)
 
