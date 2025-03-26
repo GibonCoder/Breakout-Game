@@ -31,3 +31,10 @@ class Ball:
                 self.ball.setheading(random.randint(0, 90))
             elif p_x > 0:
                 self.ball.setheading(random.randint(90, 180))
+
+    def hit_brick(self, b_x, b_y):
+        if self.ball.distance(b_x, b_y) < 25:
+            if b_x < 0:
+                self.ball.setheading(random.randint(180, 270))
+            elif b_x > 0:
+                self.ball.setheading(random.randint(270, 360))
