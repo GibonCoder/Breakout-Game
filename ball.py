@@ -38,3 +38,7 @@ class Ball:
                 self.ball.setheading(random.randint(180, 270))
             elif b_x > 0:
                 self.ball.setheading(random.randint(270, 360))
+
+    def hit_wall(self):
+        if self.ball.xcor() > 390 or self.ball.xcor() < -390:
+            self.ball.setheading(180 - self.ball.heading())
