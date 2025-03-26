@@ -12,5 +12,11 @@ class Brick:
         self.brick.speed(0)
         self.brick.shapesize(stretch_len=1, stretch_wid=1)
 
+    def get_x(self):
+        return self.brick.xcor()
+
+    def get_y(self):
+        return self.brick.ycor()
+
     def set_position(self, x, y):
         self.brick.goto(x, y)
