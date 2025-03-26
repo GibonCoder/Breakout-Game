@@ -31,7 +31,6 @@ class Screen:
                 x = -380 + (col * 80)
                 y = 250 - (row * 20)
                 self.bricks[row][col].set_position(x, y)
-                self.bricks[row][col].set_size('small')
 
     def play(self, player, ball):
         self.screen.listen()
