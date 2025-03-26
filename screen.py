@@ -29,7 +29,7 @@ class Screen:
         for row in range(len(self.bricks)):
             for col in range(len(self.bricks[row])):
                 x = -385 + (col * 20)
-                y = 250 - (row * 20)
+                y = 290 - (row * 20)
                 self.bricks[row][col].set_position(x, y)
 
     def play(self, player, ball):
