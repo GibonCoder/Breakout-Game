@@ -39,7 +39,13 @@ class Screen:
         self.place_bricks()
         while self._is_game_on:
             ball.move()
-            # Collision check with paddle
+            # Collision detection with paddle
             paddle_x = player.get_x()
             paddle_y = player.get_y()
             ball.hit_paddle(paddle_x, paddle_y)
+            # Collision detection with bricks
+            for row in self.bricks:
+                for brick in row:
+                    brick_x = brick.get_x()
+                    brick_y = brick.get_y()
+                    ball.hit_brick(brick_x, brick_y)
