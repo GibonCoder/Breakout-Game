@@ -7,7 +7,7 @@ class Screen:
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
-        self.bricks = [[Brick() for _ in range(10)] for _ in range(5)]
+        self.bricks = [[Brick() for _ in range(39)] for _ in range(5)]
         # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
@@ -28,7 +28,7 @@ class Screen:
     def place_bricks(self):
         for row in range(len(self.bricks)):
             for col in range(len(self.bricks[row])):
-                x = -380 + (col * 20)
+                x = -385 + (col * 20)
                 y = 250 - (row * 20)
                 self.bricks[row][col].set_position(x, y)
 
