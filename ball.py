@@ -36,10 +36,9 @@ class Ball:
         if self.ball.distance(b_x, b_y) < 25:
             if self.ball.heading() in range(90, 180):
                 self.ball.setheading(random.randint(180, 270))
-                return True
             elif self.ball.heading() in range(0, 90):
                 self.ball.setheading(random.randint(270, 360))
-                return True
+            return True
 
     def hit_wall(self):
         if self.ball.xcor() > 390 or self.ball.xcor() < -390:
