@@ -20,3 +20,7 @@ class Brick:
 
     def set_position(self, x, y):
         self.brick.goto(x, y)
+
+    def is_break(self):
+        self.brick.hideturtle()
+        self.brick.goto(1000, 1000)
