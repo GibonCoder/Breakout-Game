@@ -50,4 +50,6 @@ class Screen:
                 for brick in row:
                     brick_x = brick.get_x()
                     brick_y = brick.get_y()
-                    ball.hit_brick(brick_x, brick_y)
+                    # To investigate if work correctly
+                    if ball.hit_brick(brick_x, brick_y):
+                        row.remove(brick)
