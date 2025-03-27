@@ -27,16 +27,16 @@ class Ball:
 
     def hit_paddle(self, p_x, p_y):
         if self.ball.distance(p_x, p_y) < 25 and self.ball.ycor() < -250:
-            if p_x < 0:
+            if self.ball.heading() in range(270, 360):
                 self.ball.setheading(random.randint(0, 90))
-            elif p_x > 0:
+            elif self.ball.heading() in range(180, 270):
                 self.ball.setheading(random.randint(90, 180))
 
     def hit_brick(self, b_x, b_y):
         if self.ball.distance(b_x, b_y) < 25:
-            if b_x < 0:
+            if self.ball.heading() in range(90, 180):
                 self.ball.setheading(random.randint(180, 270))
-            elif b_x > 0:
+            elif self.ball.heading() in range(0, 90):
                 self.ball.setheading(random.randint(270, 360))
 
     def hit_wall(self):
