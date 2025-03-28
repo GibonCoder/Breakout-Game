@@ -26,7 +26,7 @@ class Ball:
             self.ball.sety(self.ball.ycor() - 2)
 
     def hit_paddle(self, p_x, p_y):
-        if self.ball.distance(p_x, p_y) < 25 and self.ball.ycor() < -250:
+        if self.ball.distance(p_x, p_y) < 30 and self.ball.ycor() < -250:
             if self.ball.heading() in range(270, 360):
                 self.ball.setheading(random.randint(0, 90))
             elif self.ball.heading() in range(180, 270):
