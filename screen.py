@@ -14,10 +14,6 @@ class Screen:
         self.screen.setup(width=800, height=600)
         self.play(player, ball)
 
-    def broken_brick(self, brick):
-        brick.brick.hideturtle()
-        brick.brick.goto(1000, 1000)
-
     def run_screen(self):
         self.screen.mainloop()
 
