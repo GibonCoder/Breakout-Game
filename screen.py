@@ -14,6 +14,10 @@ class Screen:
         self.screen.setup(width=800, height=600)
         self.play(player, ball)
 
+    def broken_brick(self, brick):
+        brick.brick.hideturtle()
+        brick.brick.goto(1000, 1000)
+
     def run_screen(self):
         self.screen.mainloop()
 
@@ -52,4 +56,5 @@ class Screen:
                     brick_y = brick.get_y()
                     # To investigate if work correctly
                     if ball.hit_brick(brick_x, brick_y):
+                        brick.is_break()
                         row.remove(brick)
