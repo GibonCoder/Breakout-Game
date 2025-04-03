@@ -53,3 +53,6 @@ class Screen:
                     # To investigate if work correctly
                     if ball.hit_brick(brick_x, brick_y):
                         brick.is_break(row)
+            # Ball out of screen detection
+            if ball.is_out():
+                self._is_game_on = False
