@@ -37,11 +37,12 @@ class Screen:
 
     def play(self, player, ball):
         while self._is_game_on:
+            # Bricks placement
+            self.place_bricks()
             # Player movement
             self.screen.listen()
             self.screen.onkeypress(player.move_left, 'Left')
             self.screen.onkeypress(player.move_right, 'Right')
-            self.place_bricks()
             # Ball movement
             ball.move()
             # Collision detection with walls
@@ -61,3 +62,4 @@ class Screen:
             # Ball out of screen detection
             if ball.is_out():
                 self._is_game_on = False
+                self.stop_screen()
