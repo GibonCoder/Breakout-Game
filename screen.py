@@ -17,6 +17,9 @@ class Screen:
     def run_screen(self):
         self.screen.mainloop()
 
+    def stop_screen(self):
+        self.screen.bye()
+
     @staticmethod
     def place_ball(ball):
         ball.showturtle()
