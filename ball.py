@@ -43,3 +43,7 @@ class Ball:
     def hit_wall(self):
         if self.ball.xcor() > 390 or self.ball.xcor() < -390:
             self.ball.setheading(180 - self.ball.heading())
+
+    def is_out(self):
+        if self.ball.ycor() < -300:
+            return True
