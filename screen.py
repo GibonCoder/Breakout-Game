@@ -33,11 +33,13 @@ class Screen:
                 self.bricks[row][col].set_position(x, y)
 
     def play(self, player, ball):
-        self.screen.listen()
-        self.screen.onkeypress(player.move_left, 'Left')
-        self.screen.onkeypress(player.move_right, 'Right')
-        self.place_bricks()
         while self._is_game_on:
+            # Player movement
+            self.screen.listen()
+            self.screen.onkeypress(player.move_left, 'Left')
+            self.screen.onkeypress(player.move_right, 'Right')
+            self.place_bricks()
+            # Ball movement
             ball.move()
             # Collision detection with walls
             ball.hit_wall()
