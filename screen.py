@@ -36,9 +36,9 @@ class Screen:
                 self.bricks[row][col].set_position(x, y)
 
     def play(self, player, ball):
+        # Bricks placement
+        self.place_bricks()
         while self._is_game_on:
-            # Bricks placement
-            self.place_bricks()
             # Player movement
             self.screen.listen()
             self.screen.onkeypress(player.move_left, 'Left')
