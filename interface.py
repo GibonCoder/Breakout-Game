@@ -14,3 +14,6 @@ class Interface:
 
     def run_interface(self):
         self.root.mainloop()
+
+    def close_interface(self):
+        self.root.destroy()
