@@ -24,3 +24,14 @@ class Interface:
 
         welcome_lbl.pack()
         start_btn.pack()
+
+    def set_goodbye(self, score):
+        goodbye_lbl = tk.Label(self.root, text="You lost 😓")
+        score_lbl = tk.Label(self.root, text=f"Final score: {score}")
+        quit_btn = tk.Button(self.root, text="Quit", command=self.close_interface)
+        restart_btn = tk.Button(self.root, text="Restart")
+
+        goodbye_lbl.pack()
+        score_lbl.pack()
+        quit_btn.pack()
+        restart_btn.pack()
