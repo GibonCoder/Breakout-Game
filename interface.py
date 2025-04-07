@@ -1,4 +1,7 @@
 import tkinter as tk
+from player import Player
+from ball import Ball
+from screen import Screen
 
 
 class Interface:
