@@ -18,11 +18,17 @@ class Interface:
         self.root.destroy()
 
     @staticmethod
-    def run_game(self):
+    def run_game():
         # Initialize Player and Ball
         player = Player()
         ball = Ball()
         screen = Screen(player, ball)
+
+        screen.run_screen()
+
+    def restart_game(self):
+        self.close_interface()
+        self.run_game()
 
     def set_welcome(self):
         welcome_lbl = tk.Label(self.root, text="Welcome to the Breakout Game")
