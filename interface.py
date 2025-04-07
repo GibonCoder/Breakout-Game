@@ -8,3 +8,9 @@ class Interface:
         self.goodbye_lbl = tk.Label(self.root, text="You lost 😓")
         self.score_lbl = tk.Label(self.root)
         self.start_btn = tk.Button(self.root, text="Play")
+        # Screen setup
+        self.root.title("Breakout Game")
+        self.root.geometry("800x600")
+
+    def run_interface(self):
+        self.root.mainloop()
