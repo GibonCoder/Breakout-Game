@@ -17,3 +17,10 @@ class Interface:
 
     def close_interface(self):
         self.root.destroy()
+
+    def set_welcome(self):
+        welcome_lbl = tk.Label(self.root, text="Welcome to the Breakout Game")
+        start_btn = tk.Button(self.root, text="Play", command=self.close_interface)
+
+        welcome_lbl.pack()
+        start_btn.pack()
