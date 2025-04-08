@@ -21,8 +21,8 @@ class Interface:
         self.root.geometry("800x600")
 
     def run_interface(self):
-        self.root.mainloop()
         self.set_welcome()
+        self.root.mainloop()
 
     def close_interface(self):
         self.root.destroy()
