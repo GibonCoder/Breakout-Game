@@ -43,18 +43,12 @@ class Interface:
         self.run_game()
 
     def set_welcome(self):
-
-
-        welcome_lbl.pack()
-        start_btn.pack()
+        self.widgets["welcome label"].pack()
+        self.widgets["start button"].pack()
 
     def set_goodbye(self, score):
-        goodbye_lbl = tk.Label(self.root, text="You lost 😓")
-        score_lbl = tk.Label(self.root, text=f"Final score: {score}")
-        quit_btn = tk.Button(self.root, text="Quit", command=self.close_interface)
-        restart_btn = tk.Button(self.root, text="Restart")
-
-        goodbye_lbl.pack()
-        score_lbl.pack()
-        quit_btn.pack()
-        restart_btn.pack()
+        self.widgets["goodbye label"].pack()
+        self.widgets["score label"].config(text=f"Final score: {score}")
+        self.widgets["score label"].pack()
+        self.widgets["quit button"].pack()
+        self.widgets["restart button"].pack()
