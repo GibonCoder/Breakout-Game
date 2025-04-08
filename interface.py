@@ -23,6 +23,7 @@ class Interface:
         player = Player()
         ball = Ball()
         screen = Screen(player, ball)
+        screen.place_player(player.paddle)
 
         screen.run_screen()
 
