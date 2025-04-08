@@ -7,7 +7,7 @@ from screen import Screen
 class Interface:
     def __init__(self):
         self.root = tk.Tk()
-        widgets = {
+        self.widgets = {
             "welcome label": tk.Label(self.root, text="Welcome to the Breakout Game"),
             "start button": tk.Button(self.root, text="Play", command=self.run_game),
             "goodbye label": tk.Label(self.root, text="You lost 😓"),
@@ -43,8 +43,7 @@ class Interface:
         self.run_game()
 
     def set_welcome(self):
-        welcome_lbl = tk.Label(self.root, text="Welcome to the Breakout Game")
-        start_btn = tk.Button(self.root, text="Play", command=self.run_game)
+
 
         welcome_lbl.pack()
         start_btn.pack()
