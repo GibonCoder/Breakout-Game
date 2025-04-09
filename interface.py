@@ -25,7 +25,7 @@ class Interface:
         self.root.mainloop()
 
     def close_interface(self):
-        self.root.quit()
+        self.root.withdraw()
 
     def run_game(self):
         self.close_interface()
@@ -38,7 +38,7 @@ class Interface:
         screen.run_screen()
 
     def on_game_over(self, score):
-        self.__init__()
+        self.root.deiconify()
         self.set_goodbye(score)
         self.root.mainloop()
 
