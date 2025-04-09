@@ -3,11 +3,12 @@ from brick import Brick
 
 
 class Screen:
-    def __init__(self, player, ball):
+    def __init__(self, player, ball, game_over_callback):
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
         self.bricks = [[Brick() for _ in range(39)] for _ in range(10)]
+        self.game_over_callback = game_over_callback
         # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
@@ -63,3 +64,4 @@ class Screen:
             if ball.is_out():
                 self._is_game_on = False
                 self.stop_screen()
+                self.game_over_callback(self.score)
