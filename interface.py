@@ -25,7 +25,7 @@ class Interface:
         self.root.mainloop()
 
     def close_interface(self):
-        self.root.destroy()
+        self.root.quit()
 
     def run_game(self):
         self.close_interface()
