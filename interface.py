@@ -13,7 +13,7 @@ class Interface:
             "goodbye label": tk.Label(self.root, text="You lost 😓"),
             "score label": tk.Label(self.root, text="Final score: 0"),
             "quit button": tk.Button(self.root, text="Quit", command=self.close_interface),
-            "restart button": tk.Button(self.root, text="Restart Game", command=self.restart_game)
+            "restart button": tk.Button(self.root, text="Restart Game", command=self.run_game)
 
         }
         # Screen setup
