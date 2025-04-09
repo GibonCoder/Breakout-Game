@@ -42,10 +42,6 @@ class Interface:
         self.set_goodbye(score)
         self.root.mainloop()
 
-    def restart_game(self):
-        self.close_interface()
-        self.run_game()
-
     def set_welcome(self):
         self.widgets["welcome label"].pack()
         self.widgets["start button"].pack()
