@@ -28,6 +28,7 @@ class Interface:
         self.root.destroy()
 
     def run_game(self):
+        self.close_interface()
         # Initialize Player and Ball
         player = Player()
         ball = Ball()
