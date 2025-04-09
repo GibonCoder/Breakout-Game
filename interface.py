@@ -37,6 +37,11 @@ class Interface:
 
         screen.run_screen()
 
+    def on_game_over(self, score):
+        self.__init__()
+        self.set_goodbye(score)
+        self.root.mainloop()
+
     def restart_game(self):
         self.close_interface()
         self.run_game()
