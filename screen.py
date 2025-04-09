@@ -9,6 +9,7 @@ class Screen:
         self._is_game_on = True
         self.bricks = [[Brick() for _ in range(39)] for _ in range(10)]
         self.game_over_callback = game_over_callback
+        self.score = 0
         # Screen setup
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
@@ -60,6 +61,7 @@ class Screen:
                     # To investigate if work correctly
                     if ball.hit_brick(brick_x, brick_y):
                         brick.is_break(row)
+                        self.score += 1
             # Ball out of screen detection
             if ball.is_out():
                 self._is_game_on = False
