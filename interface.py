@@ -37,8 +37,6 @@ class Interface:
 
         screen.run_screen()
 
-        self.close_interface()
-
     def restart_game(self):
         self.close_interface()
         self.run_game()
