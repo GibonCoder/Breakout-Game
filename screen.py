@@ -22,6 +22,9 @@ class Screen:
     def stop_game(self):
         self.screen.clear()
 
+    def close_screen(self):
+        self.screen.bye()
+
     @staticmethod
     def place_ball(ball):
         ball.showturtle()
