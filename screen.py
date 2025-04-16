@@ -19,8 +19,8 @@ class Screen:
     def run_screen(self):
         self.screen.mainloop()
 
-    def stop_screen(self):
-        self.screen.bye()
+    def stop_game(self):
+        self.screen.clear()
 
     @staticmethod
     def place_ball(ball):
@@ -65,5 +65,5 @@ class Screen:
             # Ball out of screen detection
             if ball.is_out():
                 self._is_game_on = False
-                self.stop_screen()
+                self.stop_game()
                 self.game_over_callback(self.score)
