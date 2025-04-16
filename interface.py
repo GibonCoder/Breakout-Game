@@ -36,6 +36,10 @@ class Interface:
         self.close_interface()
         self.screen.run_screen()
 
+    def end_game(self):
+        self.screen.stop_game()
+        self.close_interface()
+
     def on_game_over(self, score):
         self.root.deiconify()
         self.set_goodbye(score)
