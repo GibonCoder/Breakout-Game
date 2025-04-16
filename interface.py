@@ -34,13 +34,7 @@ class Interface:
 
     def run_game(self):
         self.close_interface()
-        # Initialize Player and Ball
-        player = Player()
-        ball = Ball()
-        screen = Screen(player, ball, self.on_game_over)
-        screen.place_player(player.paddle)
-
-        screen.run_screen()
+        self.screen.run_screen()
 
     def on_game_over(self, score):
         self.root.deiconify()
