@@ -20,6 +20,11 @@ class Interface:
         self.root.title("Breakout Game")
         self.root.geometry("800x600")
 
+        # Objects instances
+        self.player = Player()
+        self.ball = Ball()
+        self.screen = Screen(self.player, self.ball, self.on_game_over)
+
     def run_interface(self):
         self.set_welcome()
         self.root.mainloop()
