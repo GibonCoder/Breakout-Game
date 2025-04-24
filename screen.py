@@ -14,6 +14,8 @@ class Screen:
         self.screen.title("Breakout Game")
         self.screen.bgcolor('black')
         self.screen.setup(width=800, height=600)
+        self.screen.tracer(0)
+        # Game
         self.play(player, ball)
 
     def run_screen(self):
@@ -70,3 +72,4 @@ class Screen:
                 self._is_game_on = False
                 self.stop_game()
                 self.game_over_callback(self.score)
+            self.screen.update()
