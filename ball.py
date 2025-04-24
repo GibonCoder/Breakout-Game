@@ -8,22 +8,23 @@ class Ball:
         self.ball.shape('circle')
         self.ball.color('white')
         self.ball.penup()
+        self.ball.speed(0)
         self.ball.goto(0, 0)
         self.ball.setheading(225)
 
     def move(self):
         if self.ball.heading() in range(0, 90):
-            self.ball.setx(self.ball.xcor() + 2)
-            self.ball.sety(self.ball.ycor() + 2)
+            self.ball.setx(self.ball.xcor() + 5)
+            self.ball.sety(self.ball.ycor() + 5)
         elif self.ball.heading() in range(90, 180):
-            self.ball.setx(self.ball.xcor() - 2)
-            self.ball.sety(self.ball.ycor() + 2)
+            self.ball.setx(self.ball.xcor() - 5)
+            self.ball.sety(self.ball.ycor() + 5)
         elif self.ball.heading() in range(180, 270):
-            self.ball.setx(self.ball.xcor() - 2)
-            self.ball.sety(self.ball.ycor() - 2)
+            self.ball.setx(self.ball.xcor() - 5)
+            self.ball.sety(self.ball.ycor() - 5)
         elif self.ball.heading() in range(270, 360):
-            self.ball.setx(self.ball.xcor() + 2)
-            self.ball.sety(self.ball.ycor() - 2)
+            self.ball.setx(self.ball.xcor() + 5)
+            self.ball.sety(self.ball.ycor() - 5)
 
     def hit_paddle(self, p_x, p_y):
         if self.ball.distance(p_x, p_y) < 30 and self.ball.ycor() < -250:
