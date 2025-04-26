@@ -27,14 +27,6 @@ class Screen:
     def close_screen(self):
         self.screen.bye()
 
-    @staticmethod
-    def place_ball(ball):
-        ball.showturtle()
-
-    @staticmethod
-    def place_player(player):
-        player.showturtle()
-
     def place_bricks(self):
         for row in range(len(self.bricks)):
             for col in range(len(self.bricks[row])):
