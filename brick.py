@@ -3,7 +3,7 @@ from random_color_generator import random_color_generator as random_color
 
 
 class Brick:
-    def __init__(self):
+    def __init__(self, x, y):
         self._brick = t. Turtle()
         self._brick.shape('square')
         t.Screen().colormode(255)
@@ -11,6 +11,7 @@ class Brick:
         self._brick.penup()
         self._brick.speed(0)
         self._brick.shapesize(stretch_len=1, stretch_wid=1)
+        self._brick.goto(x, y)
 
     def get_x(self):
         return self._brick.xcor()
