@@ -21,9 +21,9 @@ class Interface:
         self.root.geometry("800x600")
 
         # Objects instances
-        self.player = Player()
-        self.ball = Ball()
-        self.screen = Screen(self.player, self.ball, self.on_game_over)
+        self.player = None
+        self.ball = None
+        self.screen = None
 
     def run_interface(self):
         self.set_welcome()
@@ -34,6 +34,10 @@ class Interface:
 
     def run_game(self):
         self.close_interface()
+
+        self.player = Player()
+        self.ball = Ball()
+        self.screen = Screen(self.player, self.ball, self.on_game_over)
         self.screen.run_screen()
 
     def end_game(self):
