@@ -5,20 +5,23 @@ from brick import Brick
 class Screen:
     def __init__(self, player, ball, game_over_callback):
         # Variables
-        self._screen = None
+        self.screen = t.Screen()
+        self._screen = t.Screen()
         self._is_game_on = True
         self.bricks = []
         self.game_over_callback = game_over_callback
         self.score = 0
-        self.player = player
-        self.ball = ball
-
-    def initialize_screen(self):
-        self._screen = t.Screen()
+        # Screen setup
+        self.screen.title("Breakout Game")
+        self.screen.bgcolor('black')
+        self.screen.setup(width=800, height=600)
+        self.screen.tracer(0)
         self._screen.title("Breakout Game")
         self._screen.bgcolor('black')
         self._screen.setup(width=800, height=600)
         self._screen.tracer(0)
+        # Game
+        self.play(player, ball)
 
     def run_screen(self):
         self._screen.mainloop()
