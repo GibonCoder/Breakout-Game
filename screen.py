@@ -5,27 +5,27 @@ from brick import Brick
 class Screen:
     def __init__(self, player, ball, game_over_callback):
         # Variables
-        self.screen = t.Screen()
+        self._screen = t.Screen()
         self._is_game_on = True
         self.bricks = []
         self.game_over_callback = game_over_callback
         self.score = 0
         # Screen setup
-        self.screen.title("Breakout Game")
-        self.screen.bgcolor('black')
-        self.screen.setup(width=800, height=600)
-        self.screen.tracer(0)
+        self._screen.title("Breakout Game")
+        self._screen.bgcolor('black')
+        self._screen.setup(width=800, height=600)
+        self._screen.tracer(0)
         # Game
         self.play(player, ball)
 
     def run_screen(self):
-        self.screen.mainloop()
+        self._screen.mainloop()
 
     def stop_game(self):
-        self.screen.clear()
+        self._screen.clear()
 
     def close_screen(self):
-        self.screen.bye()
+        self._screen.bye()
 
     def place_bricks(self):
         rows = 10
@@ -39,9 +39,9 @@ class Screen:
 
     def play(self, player, ball):
         # Player movement
-        self.screen.listen()
-        self.screen.onkeypress(player.move_left, 'Left')
-        self.screen.onkeypress(player.move_right, 'Right')
+        self._screen.listen()
+        self._screen.onkeypress(player.move_left, 'Left')
+        self._screen.onkeypress(player.move_right, 'Right')
         # Bricks placement
         self.place_bricks()
         while self._is_game_on:
@@ -66,4 +66,4 @@ class Screen:
                 self._is_game_on = False
                 self.stop_game()
                 self.game_over_callback(self.score)
-            self.screen.update()
+            self._screen.update()
