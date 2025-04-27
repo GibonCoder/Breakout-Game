@@ -30,11 +30,12 @@ class Screen:
     def place_bricks(self):
         rows = 10
         cols = 39
-        for row in range(len(self.bricks)):
-            for col in range(len(self.bricks[row])):
+        for row in range(rows):
+            for col in range(cols):
                 x = -385 + (col * 20)
                 y = 290 - (row * 20)
-                self.bricks[row][col].set_position(x, y)
+                brick = Brick(x, y)
+                self.bricks.append(brick)
 
     def play(self, player, ball):
         # Player movement
