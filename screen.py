@@ -7,7 +7,7 @@ class Screen:
         # Variables
         self.screen = t.Screen()
         self._is_game_on = True
-        self.bricks = [[Brick() for _ in range(39)] for _ in range(10)]
+        self.bricks = []
         self.game_over_callback = game_over_callback
         self.score = 0
         # Screen setup
