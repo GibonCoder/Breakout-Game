@@ -10,8 +10,8 @@ class Screen:
         self.bricks = []
         self.game_over_callback = game_over_callback
         self.score = 0
-        # Game
-        self.play(player, ball)
+        self.player = player
+        self.ball = ball
 
     def initialize_screen(self):
         self._screen = t.Screen()
