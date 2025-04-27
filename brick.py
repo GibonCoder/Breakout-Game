@@ -11,17 +11,12 @@ class Brick:
         self.brick.penup()
         self.brick.speed(0)
         self.brick.shapesize(stretch_len=1, stretch_wid=1)
-        self.brick.hideturtle()
 
     def get_x(self):
         return self.brick.xcor()
 
     def get_y(self):
         return self.brick.ycor()
-
-    def set_position(self, x, y):
-        self.brick.goto(x, y)
-        self.brick.showturtle()
 
     def is_break(self, bricks_list: list):
         self.brick.hideturtle()
