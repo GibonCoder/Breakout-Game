@@ -28,6 +28,8 @@ class Screen:
         self.screen.bye()
 
     def place_bricks(self):
+        rows = 10
+        cols = 39
         for row in range(len(self.bricks)):
             for col in range(len(self.bricks[row])):
                 x = -385 + (col * 20)
