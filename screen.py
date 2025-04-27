@@ -54,14 +54,13 @@ class Screen:
             paddle_y = player.get_y()
             ball.hit_paddle(paddle_x, paddle_y)
             # Collision detection with bricks
-            for row in self.bricks:
-                for brick in row:
-                    brick_x = brick.get_x()
-                    brick_y = brick.get_y()
-                    # To investigate if work correctly
-                    if ball.hit_brick(brick_x, brick_y):
-                        brick.is_break(row)
-                        self.score += 1
+            for brick in self.bricks:
+                brick_x = brick.get_x()
+                brick_y = brick.get_y()
+                # To investigate if work correctly
+                if ball.hit_brick(brick_x, brick_y):
+                    brick.is_break(self.bricks)
+                    self.score += 1
             # Ball out of screen detection
             if ball.is_out():
                 self._is_game_on = False
