@@ -54,6 +54,9 @@ class Interface:
         self.widgets["start button"].pack()
 
     def set_goodbye(self, score):
+        for widget in self.widgets.values():
+            widget.pack_forget()
+
         self.widgets["goodbye label"].pack()
         self.widgets["score label"].config(text=f"Final score: {score}")
         self.widgets["score label"].pack()
